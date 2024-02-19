@@ -28,6 +28,6 @@ export const GoogleSignAPI = async (email, password) => {
    return res;
     } catch (error) {
         console.error("Registration failed:", error);
-        throw error; // Rethrow the error to handle it at the caller level
+        throw error;
     }
 };
