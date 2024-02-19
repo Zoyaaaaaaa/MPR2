@@ -4,6 +4,8 @@ function HomeComponent() {
   return (
     <div>
       Home comp
+
+      hiiii siddhima was here :p
     </div>
   )
 }
