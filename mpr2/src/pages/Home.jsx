@@ -17,7 +17,7 @@ const Home = () => {
             }
         })
     },[]);
-  return  loading ?<Loader/>:<HomeComponent/>;
+  return   loading ?<Loader/>:<HomeComponent/>;
     
   
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'; // Importing createBrowserRouter and RouterProvider
 import Login from "./pages/Login";
-import {app} from "./firebaseConfig"
+import {app,auth,firestore} from "./firebaseConfig"
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Register from './pages/Register';
@@ -26,8 +26,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    
     <RouterProvider router={router}>
-     
     </RouterProvider>
     <ToastContainer/>
   </React.StrictMode>
