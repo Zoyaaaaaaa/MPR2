@@ -1,11 +1,17 @@
 import React from 'react'
+import Topbar from './common/Topbar'
+import './HomeComp.scss'
+import PostStatus from './postupdate'
 
 function HomeComponent() {
   return (
     <div>
-      Home comp
+      <Topbar/>
+       <div className='home-component'>
+           <PostStatus />
+       </div>
+       
 
-      hiiii siddhima was here :p
     </div>
   )
 }
