@@ -1,0 +1,36 @@
+.lander {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .image-container {
+    position: relative;
+  }
+  
+  .landerimg {
+    width: 100%;
+    height: auto;
+  }
+  
+  .slogan {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .slogan h1 {
+    background: linear-gradient(to right, #00FF00, #FFFF00, #00FF00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 100px;
+    font-weight: bold;
+    transform: translateY(-110px);
+  }
+  
+  .slogan-text {
+    background-color: #f0f8ea; /* Light green background color */
+    padding: 20px;
+    text-align: center;
+  }
+  
