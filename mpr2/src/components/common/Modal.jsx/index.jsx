@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {Button, Modal } from 'antd';
 import './index.scss';
-const ModalComponent = ({modalOpen, setModalOpen,setStatus,status}) => {
+const ModalComponent = ({modalOpen, setModalOpen,sendStatus,setStatus,status}) => {
 
 
   return (
@@ -16,7 +16,7 @@ const ModalComponent = ({modalOpen, setModalOpen,setStatus,status}) => {
         onCancel={() => setModalOpen(false)}
         footer={
             [
-                <Button key='submit' type='primary' disabled={status.length>0?false:true}>
+                <Button onClick={sendStatus} key='submit' type='primary' disabled={status.length>0?false:true}>
                    Post
                 </Button>,
 

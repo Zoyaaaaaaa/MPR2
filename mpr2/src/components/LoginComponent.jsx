@@ -14,6 +14,7 @@ function LoginComponent() {
       
       let user=await loginAPI(credentials.email, credentials.password);
       toast.success("Successfully Signed In!");
+      localStorage.setItem("userEmail",res.user.email);
       navigate("/home");
       console.log(user);
     

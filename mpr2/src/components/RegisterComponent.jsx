@@ -14,6 +14,7 @@ function RegisterComponent() {
       
       let user=await RegisterAPI(credentials.email, credentials.password);
       toast.success("Account created successfully!");
+      localStorage.setItem("userEmail",res.user.email);
       navigate("/home");
       console.log(user);
     
@@ -31,6 +32,14 @@ function RegisterComponent() {
     <div className='login-wrapper'>
       <h1>Sign Up</h1>
       <div className="auth-input">
+      <input
+          className='common-input'
+          placeholder='Name'
+          value={credentials.email}
+          onChange={(event) =>
+            setCredentials({ ...credentials, name: event.target.value })
+          }
+        />
         <input
           className='common-input'
           placeholder='Enter your email'

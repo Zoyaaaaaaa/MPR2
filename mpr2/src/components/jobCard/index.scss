@@ -1,0 +1,41 @@
+.job-card {
+    margin: 100px;
+    width:470px;
+    transition: all 0.3s ease-in-out;
+  
+    &:hover {
+      transform: scale(1.05);
+    }
+  
+    &.clicked-card {
+      width: 20rem;
+      background-color: #f8f9fa;
+    }
+  
+    .card-img-top {
+      width: 100%;
+      height: 150px;
+    }
+  
+    .list-group-item {
+      background-color: transparent;
+      border-color: transparent;
+    }
+  
+   
+    .search-button {
+        margin-left: 0.3rem;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+        font-size: 18px; /* Reduced font size */
+      }
+      .search-button:hover{
+        background-color: #f8f9fa;
+        color: black;
+      }
+  }
+  

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Search Results</title>
+ 
+  <style>
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Jobs</h1>
+  <div id="jobCards"></div>
+
+  <script>
+    const jobCardsContainer = document.getElementById('jobCards');
+
+    // Fetch job data from the server
+    fetch('/jobs')
+      .then(response => response.json())
+      .then(jobs => {
+        jobs.forEach(job => {
+          const card = document.createElement('div');
+          card.classList.add('card');
+
+          const title = document.createElement('h2');
+          title.textContent = job.job_title;
+          card.appendChild(title);
+
+          const company = document.createElement('p');
+          company.textContent = `Company: ${job.company_name}`;
+          card.appendChild(company);
+
+          const location = document.createElement('p');
+          location.textContent = `Location: ${job.location}`;
+          card.appendChild(location);
+
+          const salary = document.createElement('p');
+          salary.textContent = `Salary: ${job.salary}`;
+          card.appendChild(salary);
+
+          jobCardsContainer.appendChild(card);
+        });
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  </script>
+</body>
+</html>
